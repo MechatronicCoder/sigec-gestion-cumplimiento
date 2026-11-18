@@ -34,4 +34,3 @@ terraform.tfvars
 .DS_Store
 Thumbs.db
 .vscode/
-.refact/
