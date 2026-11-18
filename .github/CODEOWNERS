@@ -1,5 +1,7 @@
 # Cada PR que toque estas rutas pide revisión automática a su responsable.
-# Agregar al segundo integrante cuando acepte la invitación al repositorio.
-*                   @MechatronicCoder
+# La revisión es recomendada, no obligatoria: cualquiera de los dos puede fusionar.
+*                   @MechatronicCoder @jesus2829
+/backend/           @jesus2829
+/frontend/          @jesus2829
 /.github/           @MechatronicCoder
 /infra/             @MechatronicCoder
