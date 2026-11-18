@@ -5,7 +5,7 @@ Este archivo es la referencia del backlog. El trabajo diario se gestiona en Jira
 - **Responsables:** **W** = William (DevOps / Cloud Engineer, Scrum Master) · **J** = Jesús (Developer, Product Owner)
 - **Story points:** escala Fibonacci.
 - **Reparto:** W 50 pts · J 47 pts.
-- **Definition of Done:** rama `tipo/SGC-n-descripcion` → PR con plantilla y revisión del otro integrante → CI en verde → squash merge a `main` → tarjeta en Done.
+- **Definition of Done:** rama `tipo/SGC-n-descripcion` creada desde `develop` → PR con plantilla (revisión del otro integrante recomendada) → CI en verde → squash merge a `develop` → tarjeta en Listo. Las versiones pasan de `develop` a `main` mediante un PR de release.
 
 ## Épicas
 

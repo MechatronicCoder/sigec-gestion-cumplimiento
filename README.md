@@ -42,8 +42,33 @@ docker compose exec backend php artisan migrate --seed
 ## Gestión del proyecto
 
 - Backlog y sprints: Jira (proyecto **SGC**)
-- Flujo de trabajo: GitHub Flow. Ramas `tipo/SGC-n-descripcion`, Conventional Commits y PRs con revisión cruzada.
 - Plan y backlog detallado: [`docs/backlog.md`](docs/backlog.md)
+
+## Flujo de trabajo y ramas
+
+Usamos dos ramas permanentes, ambas protegidas: no aceptan push directo, force push ni borrado, y todo entra por Pull Request.
+
+| Rama | Para qué | Despliega en (cuando exista el CD) |
+|---|---|---|
+| `develop` | Integración del trabajo diario. Es la rama por defecto. | dev y qa |
+| `main` | Versión estable. Solo recibe PRs desde `develop`. | prod, con aprobación manual |
+
+```mermaid
+flowchart LR
+  f["feature/SGC-n-...<br/>fix/... · docs/..."] -->|PR + squash| d[develop]
+  d -->|PR de release| m[main]
+  d -. deploy .-> dev[(dev / qa)]
+  m -. deploy con aprobación .-> prod[(prod)]
+```
+
+**Ciclo de cada tarjeta de Jira:**
+
+1. `git switch develop && git pull`
+2. `git switch -c tipo/SGC-n-descripcion`. Tipos: `feature`, `fix`, `docs`, `ci`, `chore` o `infra`.
+3. Commits en formato Conventional Commits con la clave al final, por ejemplo `feat: filtra evaluaciones por dimensión SGC-19`.
+4. PR hacia `develop` con título `SGC-n tipo: descripción`, usando la plantilla.
+5. Revisión del otro integrante (recomendada) y **squash merge**. La rama se borra sola.
+6. Para liberar una versión: PR de `develop` a `main`.
 
 ## Avance
 
