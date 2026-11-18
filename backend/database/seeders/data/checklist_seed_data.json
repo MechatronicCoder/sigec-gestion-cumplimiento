@@ -1,0 +1,850 @@
+{
+  "dimensiones": [
+    {
+      "codigo": "D1",
+      "nombre": "D1: Gestión de Identidades y Accesos",
+      "peso": 18.8,
+      "orden": 1
+    },
+    {
+      "codigo": "D2",
+      "nombre": "D2: Protección de Datos",
+      "peso": 20.5,
+      "orden": 2
+    },
+    {
+      "codigo": "D3",
+      "nombre": "D3: Seguridad de Aplicaciones",
+      "peso": 21.4,
+      "orden": 3
+    },
+    {
+      "codigo": "D4",
+      "nombre": "D4: Gestión de Vulnerabilidades",
+      "peso": 14.3,
+      "orden": 4
+    },
+    {
+      "codigo": "D5",
+      "nombre": "D5: Monitoreo y Respuesta a Incidentes",
+      "peso": 25.0,
+      "orden": 5
+    }
+  ],
+  "indicadores": [
+    {
+      "codigo": "D1-I1",
+      "dimension_code": "D1",
+      "nombre": "D1-I1: Gestión de usuarios",
+      "peso": 1.0,
+      "orden": 1
+    },
+    {
+      "codigo": "D1-I2",
+      "dimension_code": "D1",
+      "nombre": "D1-I2: Autenticación",
+      "peso": 1.0,
+      "orden": 2
+    },
+    {
+      "codigo": "D1-I3",
+      "dimension_code": "D1",
+      "nombre": "D1-I3: Control de privilegios",
+      "peso": 1.0,
+      "orden": 3
+    },
+    {
+      "codigo": "D2-I1",
+      "dimension_code": "D2",
+      "nombre": "D2-I1: Confidencialidad",
+      "peso": 1.0,
+      "orden": 4
+    },
+    {
+      "codigo": "D2-I2",
+      "dimension_code": "D2",
+      "nombre": "D2-I2: Integridad",
+      "peso": 1.0,
+      "orden": 5
+    },
+    {
+      "codigo": "D2-I3",
+      "dimension_code": "D2",
+      "nombre": "D2-I3: Disponibilidad",
+      "peso": 1.0,
+      "orden": 6
+    },
+    {
+      "codigo": "D3-I1",
+      "dimension_code": "D3",
+      "nombre": "D3-I1: Validación de entradas",
+      "peso": 1.0,
+      "orden": 7
+    },
+    {
+      "codigo": "D3-I2",
+      "dimension_code": "D3",
+      "nombre": "D3-I2: Protección frente a vulnerabilidades OWASP",
+      "peso": 1.0,
+      "orden": 8
+    },
+    {
+      "codigo": "D3-I3",
+      "dimension_code": "D3",
+      "nombre": "D3-I3: Configuración segura",
+      "peso": 1.0,
+      "orden": 9
+    },
+    {
+      "codigo": "D4-I1",
+      "dimension_code": "D4",
+      "nombre": "D4-I1: Evaluación",
+      "peso": 1.0,
+      "orden": 10
+    },
+    {
+      "codigo": "D4-I2",
+      "dimension_code": "D4",
+      "nombre": "D4-I2: Priorización",
+      "peso": 1.0,
+      "orden": 11
+    },
+    {
+      "codigo": "D4-I3",
+      "dimension_code": "D4",
+      "nombre": "D4-I3: Corrección",
+      "peso": 1.0,
+      "orden": 12
+    },
+    {
+      "codigo": "D4-I4",
+      "dimension_code": "D4",
+      "nombre": "D4-I4: Seguimiento",
+      "peso": 1.0,
+      "orden": 13
+    },
+    {
+      "codigo": "D4-I5",
+      "dimension_code": "D4",
+      "nombre": "D4-I5: Mejora continua",
+      "peso": 1.0,
+      "orden": 14
+    },
+    {
+      "codigo": "D5-I1",
+      "dimension_code": "D5",
+      "nombre": "D5-I1: Monitoreo",
+      "peso": 1.0,
+      "orden": 15
+    },
+    {
+      "codigo": "D5-I2",
+      "dimension_code": "D5",
+      "nombre": "D5-I2: Detección",
+      "peso": 1.0,
+      "orden": 16
+    },
+    {
+      "codigo": "D5-I3",
+      "dimension_code": "D5",
+      "nombre": "D5-I3: Respuesta",
+      "peso": 1.0,
+      "orden": 17
+    },
+    {
+      "codigo": "D5-I4",
+      "dimension_code": "D5",
+      "nombre": "D5-I4: Recuperación",
+      "peso": 1.0,
+      "orden": 18
+    },
+    {
+      "codigo": "D5-I5",
+      "dimension_code": "D5",
+      "nombre": "D5-I5: Continuidad",
+      "peso": 1.0,
+      "orden": 19
+    },
+    {
+      "codigo": "D5-I6",
+      "dimension_code": "D5",
+      "nombre": "D5-I6: Mejora continua",
+      "peso": 1.0,
+      "orden": 20
+    }
+  ],
+  "items": [
+    {
+      "indicador_code": "D1-I1",
+      "nombre": "Proceso de alta modificación y baja de usuarios en el sistema de admisión",
+      "descripcion": "Evidencia objetiva: Política de gestión de usuarios documentada y aprobada | Fuente de verificación: Manual SGSI / Políticas de seguridad | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 5.15, 5.16, 5.18; NIST CSF PR.AC-1",
+      "orden": 1
+    },
+    {
+      "indicador_code": "D1-I1",
+      "nombre": "Registro de altas bajas y modificaciones de usuarios en el sistema de admisión",
+      "descripcion": "Evidencia objetiva: Bitácora de gestión de usuarios del sistema | Fuente de verificación: Sistema de gestión de identidades (IAM) / Active Directory | Técnica de verificación: Revisión de registros | Estándar de referencia: ISO 27002: 5.15, 5.16, 5.18; CIS Controls 6.2",
+      "orden": 2
+    },
+    {
+      "indicador_code": "D1-I1",
+      "nombre": "Usuarios inactivos (>90 días) deshabilitados",
+      "descripcion": "Evidencia objetiva: Reporte de usuarios inactivos en el sistema de admisión | Fuente de verificación: Sistema de admisión / Active Directory | Técnica de verificación: Revisión de registros | Estándar de referencia: ISO 27002: 5.16; CIS Controls 6.4",
+      "orden": 3
+    },
+    {
+      "indicador_code": "D1-I1",
+      "nombre": "Revisión periódica de cuentas de usuario (mínimo trimestral)",
+      "descripcion": "Evidencia objetiva: Actas de revisión de cuentas de usuario | Fuente de verificación: Registro de auditoría de identidades | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 5.15; NIST CSF PR.AC-1",
+      "orden": 4
+    },
+    {
+      "indicador_code": "D1-I1",
+      "nombre": "Asignación única de identificadores de usuario (no compartidos)",
+      "descripcion": "Evidencia objetiva: Configuración del sistema de autenticación | Fuente de verificación: Consola de administración del sistema | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 5.15; CIS Controls 6.1",
+      "orden": 5
+    },
+    {
+      "indicador_code": "D1-I1",
+      "nombre": "Estaciones de trabajo con acceso al sistema de admisión",
+      "descripcion": "Evidencia objetiva: Inventario de equipos con acceso al sistema | Fuente de verificación: Inventario de hardware del área de admisión | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 5.9; NIST CSF ID.AM-1",
+      "orden": 6
+    },
+    {
+      "indicador_code": "D1-I1",
+      "nombre": "Integración del sistema de admisión con el directorio activo (LDAP/AD)",
+      "descripcion": "Evidencia objetiva: Esquema de integración y configuración de autenticación centralizada | Fuente de verificación: Diagrama de arquitectura de autenticación / Consola AD | Técnica de verificación: Revisión documental / Observación directa | Estándar de referencia: NIST CSF ID.AM-3; ISO 27002: 5.15",
+      "orden": 7
+    },
+    {
+      "indicador_code": "D1-I2",
+      "nombre": "Implementación de autenticación multifactor (MFA) para acceso al sistema de admisión",
+      "descripcion": "Evidencia objetiva: Configuración de MFA activa en el sistema | Fuente de verificación: Consola de administración del sistema de admisión | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 5.17; CIS Controls 6.5; NIST CSF PR.AC-7",
+      "orden": 8
+    },
+    {
+      "indicador_code": "D1-I2",
+      "nombre": "Política de contraseñas robusta (longitud, complejidad, historial)",
+      "descripcion": "Evidencia objetiva: Configuración de políticas de contraseñas en el sistema | Fuente de verificación: Consola de administración / Active Directory | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 5.17; CIS Controls 5.1; NIST CSF PR.AC-1",
+      "orden": 9
+    },
+    {
+      "indicador_code": "D1-I2",
+      "nombre": "Bloqueo de cuenta después de intentos fallidos (≤5)",
+      "descripcion": "Evidencia objetiva: Configuración de bloqueo de cuenta en el sistema | Fuente de verificación: Consola de administración del sistema | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 5.17; CIS Controls 6.3; NIST CSF PR.AC-7",
+      "orden": 10
+    },
+    {
+      "indicador_code": "D1-I2",
+      "nombre": "Tiempo de expiración de sesión por inactividad (≤30 min)",
+      "descripcion": "Evidencia objetiva: Configuración de timeout de sesión | Fuente de verificación: Consola de administración del sistema | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 5.17; CIS Controls 6.3; NIST CSF PR.AC-7",
+      "orden": 11
+    },
+    {
+      "indicador_code": "D1-I2",
+      "nombre": "Notificación de últimos accesos exitosos al inicio de sesión",
+      "descripcion": "Evidencia objetiva: Configuración de aviso de último acceso | Fuente de verificación: Consola de administración del sistema / Interfaz de usuario | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 5.17",
+      "orden": 12
+    },
+    {
+      "indicador_code": "D1-I2",
+      "nombre": "Almacenamiento seguro de contraseñas (hash + salt)",
+      "descripcion": "Evidencia objetiva: Configuración de almacenamiento de credenciales en la base de datos | Fuente de verificación: Configuración de base de datos / DBA | Técnica de verificación: Observación directa / Entrevista técnica | Estándar de referencia: ISO 27002: 5.17; OWASP ASVS 2.1.4",
+      "orden": 13
+    },
+    {
+      "indicador_code": "D1-I2",
+      "nombre": "Uso de protocolos seguros para autenticación (LDAPS, SAML, OAuth 2.0)",
+      "descripcion": "Evidencia objetiva: Configuración de protocolos de autenticación en el sistema | Fuente de verificación: Diagrama de arquitectura / Consola de administración | Técnica de verificación: Observación directa / Revisión documental | Estándar de referencia: NIST CSF PR.AC-7; OWASP ASVS 3.1.2",
+      "orden": 14
+    },
+    {
+      "indicador_code": "D1-I3",
+      "nombre": "Implementación de control de acceso basado en roles (RBAC)",
+      "descripcion": "Evidencia objetiva: Matriz de roles y permisos documentada en el sistema de admisión | Fuente de verificación: Consola de administración del sistema | Técnica de verificación: Observación directa / Revisión documental | Estándar de referencia: ISO 27002: 5.15, 5.18; CIS Controls 6.4; NIST CSF PR.AC-1",
+      "orden": 15
+    },
+    {
+      "indicador_code": "D1-I3",
+      "nombre": "Principio de mínimo privilegio aplicado a todos los usuarios",
+      "descripcion": "Evidencia objetiva: Configuración de permisos por rol en el sistema | Fuente de verificación: Consola de administración del sistema | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 5.15; CIS Controls 6.4; NIST CSF PR.AC-4",
+      "orden": 16
+    },
+    {
+      "indicador_code": "D1-I3",
+      "nombre": "Separación de funciones en el proceso de admisión",
+      "descripcion": "Evidencia objetiva: Documentación de roles y responsabilidades en el proceso de admisión | Fuente de verificación: Manual de funciones / SGSI | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 5.3; NIST CSF PR.AC-4",
+      "orden": 17
+    },
+    {
+      "indicador_code": "D1-I3",
+      "nombre": "Acceso granular según perfil del usuario (administración, evaluación, consulta)",
+      "descripcion": "Evidencia objetiva: Configuración de permisos específicos por perfil | Fuente de verificación: Consola de administración del sistema | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 5.15; NIST CSF PR.AC-4",
+      "orden": 18
+    },
+    {
+      "indicador_code": "D1-I3",
+      "nombre": "Usuarios con privilegios administrativos limitados al personal autorizado",
+      "descripcion": "Evidencia objetiva: Lista de usuarios con privilegios administrativos | Fuente de verificación: Sistema de gestión de identidades / Active Directory | Técnica de verificación: Revisión de registros | Estándar de referencia: ISO 27002: 5.15, 5.18; CIS Controls 6.5",
+      "orden": 19
+    },
+    {
+      "indicador_code": "D1-I3",
+      "nombre": "Cuentas de servicio con privilegios mínimos necesarios",
+      "descripcion": "Evidencia objetiva: Configuración de cuentas de servicio en la base de datos | Fuente de verificación: Configuración de base de datos / DBA | Técnica de verificación: Observación directa / Entrevista técnica | Estándar de referencia: ISO 27002: 5.18; CIS Controls 6.5",
+      "orden": 20
+    },
+    {
+      "indicador_code": "D1-I3",
+      "nombre": "Segmentación de acceso entre diferentes módulos del sistema de admisión",
+      "descripcion": "Evidencia objetiva: Diagrama de arquitectura con segmentación de acceso | Fuente de verificación: Documentación de arquitectura del sistema | Técnica de verificación: Revisión documental | Estándar de referencia: NIST CSF PR.AC-1; ISO 27002: 5.15",
+      "orden": 21
+    },
+    {
+      "indicador_code": "D2-I1",
+      "nombre": "Cifrado de datos en reposo (AES-256 o superior) para información de postulantes",
+      "descripcion": "Evidencia objetiva: Configuración de cifrado en la base de datos y archivos | Fuente de verificación: Configuración del sistema de gestión de bases de datos | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.24; CIS Controls 3.11; NIST CSF PR.DS-1",
+      "orden": 22
+    },
+    {
+      "indicador_code": "D2-I1",
+      "nombre": "Cifrado de datos en tránsito (TLS 1.2 o superior) para transmisión de datos",
+      "descripcion": "Evidencia objetiva: Configuración de TLS en servidores web y aplicaciones | Fuente de verificación: Certificado SSL/TLS / Configuración del servidor web | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.24; CIS Controls 3.10; NIST CSF PR.DS-2",
+      "orden": 23
+    },
+    {
+      "indicador_code": "D2-I1",
+      "nombre": "Enmascaramiento de datos (data masking) para usuarios no autorizados",
+      "descripcion": "Evidencia objetiva: Configuración de enmascaramiento en el sistema de admisión | Fuente de verificación: Consola de administración del sistema | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.24; NIST CSF PR.DS-1",
+      "orden": 24
+    },
+    {
+      "indicador_code": "D2-I1",
+      "nombre": "Consentimiento informado para tratamiento de datos personales",
+      "descripcion": "Evidencia objetiva: Formulario de consentimiento firmado por postulantes | Fuente de verificación: Archivo de postulantes / Sistema de gestión documental | Técnica de verificación: Revisión documental | Estándar de referencia: Ley 29733; ISO 27002: 5.11, 5.12",
+      "orden": 25
+    },
+    {
+      "indicador_code": "D2-I1",
+      "nombre": "Cifrado de campos sensibles en la base de datos (DNI, correo, teléfono)",
+      "descripcion": "Evidencia objetiva: Configuración de cifrado a nivel de columna en la base de datos | Fuente de verificación: Configuración de base de datos / DBA | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.24; NIST CSF PR.DS-1",
+      "orden": 26
+    },
+    {
+      "indicador_code": "D2-I1",
+      "nombre": "Dispositivos con almacenamiento cifrado (BitLocker, FileVault)",
+      "descripcion": "Evidencia objetiva: Configuración de cifrado de disco en estaciones de trabajo | Fuente de verificación: Consola de administración de endpoints | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.24; CIS Controls 3.11",
+      "orden": 27
+    },
+    {
+      "indicador_code": "D2-I1",
+      "nombre": "Zonas de red segmentadas para el sistema de admisión",
+      "descripcion": "Evidencia objetiva: Diagrama de segmentación de red del sistema de admisión | Fuente de verificación: Documentación de arquitectura de red | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.22; NIST CSF PR.AC-5",
+      "orden": 28
+    },
+    {
+      "indicador_code": "D2-I2",
+      "nombre": "Validación de entrada de datos (input validation) en formularios de admisión",
+      "descripcion": "Evidencia objetiva: Configuración de validaciones en el sistema de admisión | Fuente de verificación: Código fuente / Consola de administración | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.28; OWASP ASVS 5; NIST CSF PR.DS-6",
+      "orden": 29
+    },
+    {
+      "indicador_code": "D2-I2",
+      "nombre": "Registro de auditoría (logs) de modificaciones a datos de postulantes",
+      "descripcion": "Evidencia objetiva: Logs del sistema de admisión con trazabilidad de cambios | Fuente de verificación: Sistema de logs / SIEM | Técnica de verificación: Revisión de registros | Estándar de referencia: ISO 27002: 8.15; NIST CSF PR.PT-1",
+      "orden": 30
+    },
+    {
+      "indicador_code": "D2-I2",
+      "nombre": "Sumas de verificación (checksums) o hash para verificar integridad de datos",
+      "descripcion": "Evidencia objetiva: Configuración de mecanismos de integridad | Fuente de verificación: Configuración de base de datos / DBA | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.24; NIST CSF PR.DS-6",
+      "orden": 31
+    },
+    {
+      "indicador_code": "D2-I2",
+      "nombre": "Trazabilidad de cambios en resultados de admisión",
+      "descripcion": "Evidencia objetiva: Historial de modificaciones en el sistema de admisión | Fuente de verificación: Logs del sistema de admisión | Técnica de verificación: Revisión de registros | Estándar de referencia: ISO 27002: 8.15; NIST CSF PR.PT-1",
+      "orden": 32
+    },
+    {
+      "indicador_code": "D2-I2",
+      "nombre": "Integridad referencial en la base de datos de postulantes",
+      "descripcion": "Evidencia objetiva: Configuración de restricciones de integridad en la base de datos | Fuente de verificación: Configuración de base de datos / DBA | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.24; NIST CSF PR.DS-6",
+      "orden": 33
+    },
+    {
+      "indicador_code": "D2-I2",
+      "nombre": "Mecanismos de detección de alteraciones no autorizadas",
+      "descripcion": "Evidencia objetiva: Configuración de IDS/IPS y monitoreo de integridad de archivos | Fuente de verificación: Consola de administración de seguridad / SIEM | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.15, 8.16; NIST CSF PR.PT-1",
+      "orden": 34
+    },
+    {
+      "indicador_code": "D2-I3",
+      "nombre": "Tiempo de actividad (uptime) documentado ≥ 99.5%",
+      "descripcion": "Evidencia objetiva: Registros de monitoreo de disponibilidad del sistema | Fuente de verificación: Sistema de monitoreo (Nagios, Zabbix, etc.) | Técnica de verificación: Revisión de registros | Estándar de referencia: ISO 27002: 8.13; NIST CSF PR.DS-4",
+      "orden": 35
+    },
+    {
+      "indicador_code": "D2-I3",
+      "nombre": "Monitoreo continuo de la disponibilidad del sistema de admisión",
+      "descripcion": "Evidencia objetiva: Configuración de herramientas de monitoreo | Fuente de verificación: Consola de monitoreo | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.13; NIST CSF PR.DS-4",
+      "orden": 36
+    },
+    {
+      "indicador_code": "D2-I3",
+      "nombre": "Respaldo automático de la base de datos de admisión",
+      "descripcion": "Evidencia objetiva: Configuración de backups automáticos de la base de datos | Fuente de verificación: Configuración de base de datos / DBA | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.13; CIS Controls 11.2",
+      "orden": 37
+    },
+    {
+      "indicador_code": "D2-I3",
+      "nombre": "Redundancia de servidores (clúster o balanceo de carga)",
+      "descripcion": "Evidencia objetiva: Configuración de alta disponibilidad en servidores del sistema de admisión | Fuente de verificación: Consola de administración de servidores | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.13; NIST CSF PR.DS-4",
+      "orden": 38
+    },
+    {
+      "indicador_code": "D2-I3",
+      "nombre": "Fuente de poder ininterrumpida (UPS) para servidores y equipos críticos",
+      "descripcion": "Evidencia objetiva: Inventario de UPS y configuración | Fuente de verificación: Inventario de hardware / Registro de mantenimiento | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.10; NIST CSF PR.PT-2",
+      "orden": 39
+    },
+    {
+      "indicador_code": "D2-I3",
+      "nombre": "Plan de recuperación ante desastres (DRP) documentado",
+      "descripcion": "Evidencia objetiva: Plan de recuperación ante desastres del sistema de admisión | Fuente de verificación: Manual de continuidad del negocio / SGSI | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.13; NIST CSF PR.DS-4",
+      "orden": 40
+    },
+    {
+      "indicador_code": "D2-I3",
+      "nombre": "Pruebas periódicas del plan de recuperación (mínimo semestral)",
+      "descripcion": "Evidencia objetiva: Actas de pruebas de recuperación | Fuente de verificación: Registro de auditoría de continuidad | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.13; NIST CSF PR.DS-4",
+      "orden": 41
+    },
+    {
+      "indicador_code": "D2-I3",
+      "nombre": "Tiempo objetivo de recuperación (RTO) ≤ 4 horas",
+      "descripcion": "Evidencia objetiva: Documentación de RTO en el plan de recuperación | Fuente de verificación: Manual de continuidad del negocio | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.13; NIST CSF PR.DS-4",
+      "orden": 42
+    },
+    {
+      "indicador_code": "D2-I3",
+      "nombre": "Punto objetivo de recuperación (RPO) ≤ 24 horas",
+      "descripcion": "Evidencia objetiva: Documentación de RPO en el plan de recuperación | Fuente de verificación: Manual de continuidad del negocio | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.13; NIST CSF PR.DS-4",
+      "orden": 43
+    },
+    {
+      "indicador_code": "D2-I3",
+      "nombre": "Plan de continuidad del negocio (BCP) para el proceso de admisión",
+      "descripcion": "Evidencia objetiva: Plan de continuidad del negocio documentado | Fuente de verificación: Manual de continuidad del negocio | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.13; NIST CSF PR.DS-4",
+      "orden": 44
+    },
+    {
+      "indicador_code": "D3-I1",
+      "nombre": "Validación del lado del servidor (server-side validation)",
+      "descripcion": "Evidencia objetiva: Configuración de validaciones en el sistema de admisión | Fuente de verificación: Código fuente / Consola de administración | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.28; OWASP ASVS 5; OWASP Top 10: A1",
+      "orden": 45
+    },
+    {
+      "indicador_code": "D3-I1",
+      "nombre": "Sanitización de entrada de usuarios para prevenir inyección SQL",
+      "descripcion": "Evidencia objetiva: Código de sanitización en el sistema de admisión | Fuente de verificación: Código fuente / Revisión de código | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.28; OWASP ASVS 5; OWASP Top 10: A3",
+      "orden": 46
+    },
+    {
+      "indicador_code": "D3-I1",
+      "nombre": "Sanitización de entrada de usuarios para prevenir XSS",
+      "descripcion": "Evidencia objetiva: Código de sanitización en el sistema de admisión | Fuente de verificación: Código fuente / Revisión de código | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.28; OWASP ASVS 5; OWASP Top 10: A3",
+      "orden": 47
+    },
+    {
+      "indicador_code": "D3-I1",
+      "nombre": "Validación de tipos de datos en campos de formularios (números, fechas, correos)",
+      "descripcion": "Evidencia objetiva: Configuración de validaciones de tipo en el sistema | Fuente de verificación: Código fuente / Consola de administración | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.28; OWASP ASVS 5",
+      "orden": 48
+    },
+    {
+      "indicador_code": "D3-I1",
+      "nombre": "Uso de consultas parametrizadas u ORM para acceso a base de datos",
+      "descripcion": "Evidencia objetiva: Código de consultas parametrizadas en el sistema de admisión | Fuente de verificación: Código fuente / DBA | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.28; OWASP ASVS 5; OWASP Top 10: A3",
+      "orden": 49
+    },
+    {
+      "indicador_code": "D3-I1",
+      "nombre": "Web Application Firewall (WAF) implementado",
+      "descripcion": "Evidencia objetiva: Configuración de WAF para el sistema de admisión | Fuente de verificación: Consola de administración de WAF | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.28; NIST CSF PR.PT-3",
+      "orden": 50
+    },
+    {
+      "indicador_code": "D3-I2",
+      "nombre": "Evaluación periódica contra OWASP Top 10 (mínimo anual)",
+      "descripcion": "Evidencia objetiva: Reporte de evaluación de seguridad del sistema de admisión | Fuente de verificación: Sistema de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: OWASP ASVS; OWASP Top 10; NIST CSF ID.RA-1",
+      "orden": 51
+    },
+    {
+      "indicador_code": "D3-I2",
+      "nombre": "Protección contra Broken Access Control (A1)",
+      "descripcion": "Evidencia objetiva: Configuración de RBAC en el sistema de admisión | Fuente de verificación: Consola de administración del sistema | Técnica de verificación: Observación directa | Estándar de referencia: OWASP Top 10: A1; OWASP ASVS 4",
+      "orden": 52
+    },
+    {
+      "indicador_code": "D3-I2",
+      "nombre": "Protección contra Cryptographic Failures (A2)",
+      "descripcion": "Evidencia objetiva: Implementación de cifrado en datos en reposo y tránsito | Fuente de verificación: Configuración de cifrado del sistema | Técnica de verificación: Observación directa | Estándar de referencia: OWASP Top 10: A2; OWASP ASVS 6",
+      "orden": 53
+    },
+    {
+      "indicador_code": "D3-I2",
+      "nombre": "Protección contra Injection (A3)",
+      "descripcion": "Evidencia objetiva: Implementación de consultas parametrizadas y sanitización | Fuente de verificación: Código fuente / Revisión de seguridad | Técnica de verificación: Observación directa | Estándar de referencia: OWASP Top 10: A3; OWASP ASVS 5",
+      "orden": 54
+    },
+    {
+      "indicador_code": "D3-I2",
+      "nombre": "Protección contra Insecure Design (A4)",
+      "descripcion": "Evidencia objetiva: Documentación de diseño de seguridad del sistema | Fuente de verificación: Documentación de arquitectura de seguridad | Técnica de verificación: Revisión documental | Estándar de referencia: OWASP Top 10: A4; OWASP ASVS 1",
+      "orden": 55
+    },
+    {
+      "indicador_code": "D3-I2",
+      "nombre": "Protección contra Security Misconfiguration (A5)",
+      "descripcion": "Evidencia objetiva: Checklist de configuración segura aplicada al sistema | Fuente de verificación: Documentación de configuración de seguridad | Técnica de verificación: Revisión documental | Estándar de referencia: OWASP Top 10: A5; CIS Controls 4.1",
+      "orden": 56
+    },
+    {
+      "indicador_code": "D3-I2",
+      "nombre": "Protección contra Vulnerable and Outdated Components (A6)",
+      "descripcion": "Evidencia objetiva: Inventario de componentes y versiones actualizadas | Fuente de verificación: Inventario de software / Dependencias | Técnica de verificación: Revisión de registros | Estándar de referencia: OWASP Top 10: A6; CIS Controls 4.3",
+      "orden": 57
+    },
+    {
+      "indicador_code": "D3-I2",
+      "nombre": "Protección contra Identification and Authentication Failures (A7)",
+      "descripcion": "Evidencia objetiva: Implementación de MFA y políticas de autenticación robustas | Fuente de verificación: Consola de administración del sistema | Técnica de verificación: Observación directa | Estándar de referencia: OWASP Top 10: A7; OWASP ASVS 2",
+      "orden": 58
+    },
+    {
+      "indicador_code": "D3-I2",
+      "nombre": "Protección contra Software and Data Integrity Failures (A8)",
+      "descripcion": "Evidencia objetiva: Uso de firmas digitales y hash de integridad | Fuente de verificación: Configuración de integridad del sistema | Técnica de verificación: Observación directa | Estándar de referencia: OWASP Top 10: A8; OWASP ASVS 10",
+      "orden": 59
+    },
+    {
+      "indicador_code": "D3-I2",
+      "nombre": "Protección contra Security Logging and Monitoring Failures (A9)",
+      "descripcion": "Evidencia objetiva: Implementación de logging y monitoreo de seguridad | Fuente de verificación: Configuración de logging / SIEM | Técnica de verificación: Observación directa | Estándar de referencia: OWASP Top 10: A9; OWASP ASVS 7",
+      "orden": 60
+    },
+    {
+      "indicador_code": "D3-I2",
+      "nombre": "Protección contra Server-Side Request Forgery (A10)",
+      "descripcion": "Evidencia objetiva: Configuración de seguridad contra SSRF en el sistema | Fuente de verificación: Código fuente / Consola de administración | Técnica de verificación: Observación directa | Estándar de referencia: OWASP Top 10: A10; OWASP ASVS 5",
+      "orden": 61
+    },
+    {
+      "indicador_code": "D3-I2",
+      "nombre": "Pruebas de penetración (pentesting) periódicas en el sistema de admisión",
+      "descripcion": "Evidencia objetiva: Reportes de pentesting de los últimos 12 meses | Fuente de verificación: Sistema de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: OWASP ASVS; NIST CSF ID.RA-1",
+      "orden": 62
+    },
+    {
+      "indicador_code": "D3-I3",
+      "nombre": "Checklist de configuración segura aplicada al sistema de admisión",
+      "descripcion": "Evidencia objetiva: Documentación de configuración de seguridad del sistema | Fuente de verificación: Manual de configuración / SGSI | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.9; CIS Controls 4.1",
+      "orden": 63
+    },
+    {
+      "indicador_code": "D3-I3",
+      "nombre": "Configuración segura de servidores y estaciones de trabajo (hardening)",
+      "descripcion": "Evidencia objetiva: Checklist de hardening aplicado a servidores y equipos | Fuente de verificación: Documentación de configuración de seguridad / Consola de administración | Técnica de verificación: Revisión documental / Observación directa | Estándar de referencia: ISO 27002: 8.9; CIS Controls 4.1",
+      "orden": 64
+    },
+    {
+      "indicador_code": "D3-I3",
+      "nombre": "Configuración segura de la base de datos de admisión",
+      "descripcion": "Evidencia objetiva: Checklist de hardening de base de datos | Fuente de verificación: Configuración de base de datos / DBA | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.9; CIS Controls 4.1",
+      "orden": 65
+    },
+    {
+      "indicador_code": "D3-I3",
+      "nombre": "Segmentación de red para el sistema de admisión",
+      "descripcion": "Evidencia objetiva: Diagrama de segmentación de red del sistema de admisión | Fuente de verificación: Documentación de arquitectura de red | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.22; NIST CSF PR.AC-5",
+      "orden": 66
+    },
+    {
+      "indicador_code": "D3-I3",
+      "nombre": "Puertos y servicios innecesarios deshabilitados",
+      "descripcion": "Evidencia objetiva: Configuración de puertos y servicios en servidores y equipos | Fuente de verificación: Consola de administración de servidores | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.9; CIS Controls 4.3",
+      "orden": 67
+    },
+    {
+      "indicador_code": "D3-I3",
+      "nombre": "Aplicación de Content Security Policy (CSP) en el sistema de admisión",
+      "descripcion": "Evidencia objetiva: Configuración de CSP en el sistema web | Fuente de verificación: Consola de administración del sistema | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.28; OWASP ASVS 5",
+      "orden": 68
+    },
+    {
+      "indicador_code": "D4-I1",
+      "nombre": "Escaneo de vulnerabilidades en el sistema de admisión (mínimo trimestral)",
+      "descripcion": "Evidencia objetiva: Reportes de escaneo de vulnerabilidades (Nessus, OpenVAS) | Fuente de verificación: Sistema de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.8; NIST CSF ID.RA-1; CIS Controls 7.4",
+      "orden": 69
+    },
+    {
+      "indicador_code": "D4-I1",
+      "nombre": "Escaneo de vulnerabilidades en servidores y estaciones de trabajo",
+      "descripcion": "Evidencia objetiva: Reportes de escaneo de vulnerabilidades de hardware | Fuente de verificación: Sistema de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.8; NIST CSF ID.RA-1",
+      "orden": 70
+    },
+    {
+      "indicador_code": "D4-I1",
+      "nombre": "Escaneo de vulnerabilidades en la base de datos de admisión",
+      "descripcion": "Evidencia objetiva: Reportes de escaneo de vulnerabilidades de base de datos | Fuente de verificación: Sistema de gestión de vulnerabilidades / DBA | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.8; NIST CSF ID.RA-1",
+      "orden": 71
+    },
+    {
+      "indicador_code": "D4-I1",
+      "nombre": "Evaluación de vulnerabilidades en la arquitectura de red",
+      "descripcion": "Evidencia objetiva: Reportes de escaneo de vulnerabilidades de red | Fuente de verificación: Sistema de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.8; NIST CSF ID.RA-1",
+      "orden": 72
+    },
+    {
+      "indicador_code": "D4-I2",
+      "nombre": "Clasificación de vulnerabilidades según CVSS v4.0",
+      "descripcion": "Evidencia objetiva: Base de datos de vulnerabilidades clasificadas por CVSS | Fuente de verificación: Sistema de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: FIRST CVSS v4.0; ISO 27002: 8.8",
+      "orden": 73
+    },
+    {
+      "indicador_code": "D4-I2",
+      "nombre": "Priorización de vulnerabilidades según criticidad del activo",
+      "descripcion": "Evidencia objetiva: Matriz de priorización de vulnerabilidades del sistema de admisión | Fuente de verificación: Sistema de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.8; NIST CSF ID.RA-1",
+      "orden": 74
+    },
+    {
+      "indicador_code": "D4-I2",
+      "nombre": "Asignación de plazos de remediación según nivel de severidad (crítico: ≤48h)",
+      "descripcion": "Evidencia objetiva: Política de gestión de vulnerabilidades documentada | Fuente de verificación: Manual de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.8; NIST CSF ID.RA-1",
+      "orden": 75
+    },
+    {
+      "indicador_code": "D4-I3",
+      "nombre": "Aplicación de parches de seguridad en el sistema de admisión",
+      "descripcion": "Evidencia objetiva: Registro de aplicación de parches en el sistema de admisión | Fuente de verificación: Sistema de gestión de parches | Técnica de verificación: Revisión de registros | Estándar de referencia: ISO 27002: 8.8; CIS Controls 7.4",
+      "orden": 76
+    },
+    {
+      "indicador_code": "D4-I3",
+      "nombre": "Aplicación de parches de seguridad en servidores y estaciones de trabajo",
+      "descripcion": "Evidencia objetiva: Registro de aplicación de parches en servidores y equipos | Fuente de verificación: Sistema de gestión de parches / Inventario de hardware | Técnica de verificación: Revisión de registros | Estándar de referencia: ISO 27002: 8.8; CIS Controls 7.4",
+      "orden": 77
+    },
+    {
+      "indicador_code": "D4-I3",
+      "nombre": "Aplicación de parches de seguridad en la base de datos de admisión",
+      "descripcion": "Evidencia objetiva: Registro de aplicación de parches en la base de datos | Fuente de verificación: Sistema de gestión de parches / DBA | Técnica de verificación: Revisión de registros | Estándar de referencia: ISO 27002: 8.8; CIS Controls 7.4",
+      "orden": 78
+    },
+    {
+      "indicador_code": "D4-I3",
+      "nombre": "Plan de remediación documentado para vulnerabilidades identificadas",
+      "descripcion": "Evidencia objetiva: Plan de remediación de vulnerabilidades del sistema de admisión | Fuente de verificación: Sistema de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.8; NIST CSF ID.RA-1",
+      "orden": 79
+    },
+    {
+      "indicador_code": "D4-I4",
+      "nombre": "Seguimiento del estado de remediación de vulnerabilidades",
+      "descripcion": "Evidencia objetiva: Dashboard de seguimiento de vulnerabilidades del sistema de admisión | Fuente de verificación: Sistema de gestión de vulnerabilidades | Técnica de verificación: Revisión de registros | Estándar de referencia: ISO 27002: 8.8; NIST CSF ID.RA-1",
+      "orden": 80
+    },
+    {
+      "indicador_code": "D4-I4",
+      "nombre": "Reportes periódicos de estado de vulnerabilidades (mínimo mensual)",
+      "descripcion": "Evidencia objetiva: Reportes de estado de vulnerabilidades del sistema de admisión | Fuente de verificación: Sistema de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.8; NIST CSF ID.RA-1",
+      "orden": 81
+    },
+    {
+      "indicador_code": "D4-I5",
+      "nombre": "Análisis de causa raíz después de la remediación de vulnerabilidades",
+      "descripcion": "Evidencia objetiva: Documentación de lecciones aprendidas y acciones correctivas | Fuente de verificación: Sistema de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.8; NIST CSF ID.RA-1",
+      "orden": 82
+    },
+    {
+      "indicador_code": "D4-I5",
+      "nombre": "Actualización de políticas y procedimientos basada en lecciones aprendidas",
+      "descripcion": "Evidencia objetiva: Políticas y procedimientos de gestión de vulnerabilidades actualizados | Fuente de verificación: Manual de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.8; NIST CSF ID.RA-1",
+      "orden": 83
+    },
+    {
+      "indicador_code": "D4-I5",
+      "nombre": "Optimización de procesos de gestión de vulnerabilidades",
+      "descripcion": "Evidencia objetiva: Registro de mejoras implementadas en el proceso de gestión de vulnerabilidades | Fuente de verificación: Sistema de gestión de vulnerabilidades | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.8; NIST CSF ID.RA-1",
+      "orden": 84
+    },
+    {
+      "indicador_code": "D5-I1",
+      "nombre": "Monitoreo continuo del sistema de admisión (24/7)",
+      "descripcion": "Evidencia objetiva: Configuración de herramientas de monitoreo del sistema de admisión | Fuente de verificación: Consola de monitoreo / SIEM | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.15, 8.16; NIST CSF PR.PT-1; CIS Controls 8.1",
+      "orden": 85
+    },
+    {
+      "indicador_code": "D5-I1",
+      "nombre": "Monitoreo de rendimiento y disponibilidad de servidores y equipos",
+      "descripcion": "Evidencia objetiva: Configuración de herramientas de monitoreo de hardware | Fuente de verificación: Consola de monitoreo | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.15; NIST CSF PR.PT-1",
+      "orden": 86
+    },
+    {
+      "indicador_code": "D5-I1",
+      "nombre": "Monitoreo de actividad en la base de datos de admisión",
+      "descripcion": "Evidencia objetiva: Configuración de monitoreo de base de datos | Fuente de verificación: Consola de monitoreo / DBA | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.15, 8.16; NIST CSF PR.PT-1",
+      "orden": 87
+    },
+    {
+      "indicador_code": "D5-I1",
+      "nombre": "Monitoreo de tráfico de red del sistema de admisión",
+      "descripcion": "Evidencia objetiva: Configuración de monitoreo de red | Fuente de verificación: Consola de monitoreo / SIEM | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.15; NIST CSF PR.PT-1",
+      "orden": 88
+    },
+    {
+      "indicador_code": "D5-I1",
+      "nombre": "Alertas configuradas para eventos de seguridad críticos",
+      "descripcion": "Evidencia objetiva: Configuración de alertas de seguridad en el sistema de admisión | Fuente de verificación: Consola de monitoreo / SIEM | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.15, 8.16; NIST CSF PR.PT-1",
+      "orden": 89
+    },
+    {
+      "indicador_code": "D5-I2",
+      "nombre": "Sistema de Detección de Intrusiones (IDS) implementado",
+      "descripcion": "Evidencia objetiva: Configuración de IDS/IPS en el sistema de admisión | Fuente de verificación: Consola de administración de seguridad / SIEM | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.16; NIST CSF DE.CM-1; CIS Controls 10.3",
+      "orden": 90
+    },
+    {
+      "indicador_code": "D5-I2",
+      "nombre": "Registro centralizado de eventos de seguridad (SIEM)",
+      "descripcion": "Evidencia objetiva: Configuración de SIEM para el sistema de admisión | Fuente de verificación: Consola de SIEM | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.15; NIST CSF DE.CM-1; CIS Controls 8.2",
+      "orden": 91
+    },
+    {
+      "indicador_code": "D5-I2",
+      "nombre": "Antivirus/antimalware actualizado en servidores y estaciones de trabajo",
+      "descripcion": "Evidencia objetiva: Configuración de antivirus/antimalware en servidores y equipos | Fuente de verificación: Consola de administración de antivirus | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.7; CIS Controls 10.3",
+      "orden": 92
+    },
+    {
+      "indicador_code": "D5-I2",
+      "nombre": "Detección de anomalías en accesos al sistema de admisión",
+      "descripcion": "Evidencia objetiva: Configuración de detección de anomalías en el sistema de admisión | Fuente de verificación: Consola de SIEM / Sistema de admisión | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.16; NIST CSF DE.CM-1",
+      "orden": 93
+    },
+    {
+      "indicador_code": "D5-I2",
+      "nombre": "Alertas de intentos de acceso no autorizado",
+      "descripcion": "Evidencia objetiva: Configuración de alertas de seguridad en el sistema de admisión | Fuente de verificación: Consola de SIEM / Sistema de admisión | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.16; NIST CSF DE.CM-1",
+      "orden": 94
+    },
+    {
+      "indicador_code": "D5-I3",
+      "nombre": "Plan de respuesta a incidentes de seguridad documentado",
+      "descripcion": "Evidencia objetiva: Plan de respuesta a incidentes del sistema de admisión | Fuente de verificación: Manual de respuesta a incidentes | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.16; NIST CSF RS.AN-1; CIS Controls 17.1",
+      "orden": 95
+    },
+    {
+      "indicador_code": "D5-I3",
+      "nombre": "Procedimientos de respuesta a incidentes para servidores y equipos",
+      "descripcion": "Evidencia objetiva: Procedimientos de respuesta a incidentes documentados | Fuente de verificación: Manual de respuesta a incidentes | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.16; NIST CSF RS.AN-1",
+      "orden": 96
+    },
+    {
+      "indicador_code": "D5-I3",
+      "nombre": "Procedimientos de respuesta a incidentes para la base de datos de admisión",
+      "descripcion": "Evidencia objetiva: Procedimientos de respuesta a incidentes documentados para la base de datos | Fuente de verificación: Manual de respuesta a incidentes / DBA | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.16; NIST CSF RS.AN-1",
+      "orden": 97
+    },
+    {
+      "indicador_code": "D5-I3",
+      "nombre": "Equipo de respuesta a incidentes designado",
+      "descripcion": "Evidencia objetiva: Acta de designación del equipo de respuesta a incidentes | Fuente de verificación: Registro de personal / Actas | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.16; NIST CSF RS.AN-1",
+      "orden": 98
+    },
+    {
+      "indicador_code": "D5-I3",
+      "nombre": "Contactos de emergencia y escalamiento documentados",
+      "descripcion": "Evidencia objetiva: Lista de contactos de emergencia y procedimientos de escalamiento | Fuente de verificación: Manual de respuesta a incidentes | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.16; NIST CSF RS.AN-1",
+      "orden": 99
+    },
+    {
+      "indicador_code": "D5-I4",
+      "nombre": "Procedimientos de recuperación del sistema de admisión documentados",
+      "descripcion": "Evidencia objetiva: Plan de recuperación del sistema de admisión | Fuente de verificación: Manual de continuidad del negocio | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.13; NIST CSF RC.RP-1",
+      "orden": 100
+    },
+    {
+      "indicador_code": "D5-I4",
+      "nombre": "Procedimientos de recuperación de la base de datos de admisión documentados",
+      "descripcion": "Evidencia objetiva: Plan de recuperación de la base de datos de admisión | Fuente de verificación: Manual de continuidad del negocio / DBA | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.13; NIST CSF RC.RP-1",
+      "orden": 101
+    },
+    {
+      "indicador_code": "D5-I4",
+      "nombre": "Procedimientos de recuperación de servidores y equipos documentados",
+      "descripcion": "Evidencia objetiva: Plan de recuperación de hardware del sistema de admisión | Fuente de verificación: Manual de continuidad del negocio | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.13; NIST CSF RC.RP-1",
+      "orden": 102
+    },
+    {
+      "indicador_code": "D5-I4",
+      "nombre": "Pruebas periódicas de recuperación (mínimo semestral)",
+      "descripcion": "Evidencia objetiva: Actas de pruebas de recuperación del sistema de admisión | Fuente de verificación: Registro de auditoría de continuidad | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.13; NIST CSF RC.RP-1",
+      "orden": 103
+    },
+    {
+      "indicador_code": "D5-I5",
+      "nombre": "Plan de continuidad del negocio (BCP) documentado para el sistema de admisión",
+      "descripcion": "Evidencia objetiva: Plan de continuidad del negocio del sistema de admisión | Fuente de verificación: Manual de continuidad del negocio | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.13; NIST CSF RC.RP-1",
+      "orden": 104
+    },
+    {
+      "indicador_code": "D5-I5",
+      "nombre": "Redundancia de equipos críticos (servidores, red)",
+      "descripcion": "Evidencia objetiva: Configuración de redundancia en servidores y equipos | Fuente de verificación: Inventario de hardware / Configuración de servidores | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.13; NIST CSF PR.DS-4",
+      "orden": 105
+    },
+    {
+      "indicador_code": "D5-I5",
+      "nombre": "Redundancia de la base de datos de admisión (réplicas, clúster)",
+      "descripcion": "Evidencia objetiva: Configuración de redundancia de la base de datos de admisión | Fuente de verificación: Configuración de base de datos / DBA | Técnica de verificación: Observación directa | Estándar de referencia: ISO 27002: 8.13; NIST CSF PR.DS-4",
+      "orden": 106
+    },
+    {
+      "indicador_code": "D5-I5",
+      "nombre": "Sitio alterno de recuperación documentado",
+      "descripcion": "Evidencia objetiva: Documentación del sitio alterno de recuperación | Fuente de verificación: Manual de continuidad del negocio | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.13; NIST CSF RC.RP-1",
+      "orden": 107
+    },
+    {
+      "indicador_code": "D5-I5",
+      "nombre": "Pruebas periódicas del plan de continuidad (mínimo anual)",
+      "descripcion": "Evidencia objetiva: Actas de pruebas de continuidad del sistema de admisión | Fuente de verificación: Registro de auditoría de continuidad | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.13; NIST CSF RC.RP-1",
+      "orden": 108
+    },
+    {
+      "indicador_code": "D5-I6",
+      "nombre": "Análisis post-incidente (lecciones aprendidas) documentado",
+      "descripcion": "Evidencia objetiva: Documentación de lecciones aprendidas post-incidente | Fuente de verificación: Sistema de gestión de incidentes | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.16; NIST CSF RC.IM-1",
+      "orden": 109
+    },
+    {
+      "indicador_code": "D5-I6",
+      "nombre": "Actualización de políticas y procedimientos basada en incidentes",
+      "descripcion": "Evidencia objetiva: Políticas y procedimientos de monitoreo y respuesta actualizados | Fuente de verificación: Manual de monitoreo y respuesta a incidentes | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.16; NIST CSF RC.IM-1",
+      "orden": 110
+    },
+    {
+      "indicador_code": "D5-I6",
+      "nombre": "Reportes periódicos de incidentes de seguridad (mínimo mensual)",
+      "descripcion": "Evidencia objetiva: Reportes de incidentes de seguridad del sistema de admisión | Fuente de verificación: Sistema de gestión de incidentes | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.16; NIST CSF RC.IM-1",
+      "orden": 111
+    },
+    {
+      "indicador_code": "D5-I6",
+      "nombre": "Optimización de procesos de monitoreo y respuesta a incidentes",
+      "descripcion": "Evidencia objetiva: Registro de mejoras implementadas en el sistema de monitoreo y respuesta | Fuente de verificación: Sistema de gestión de incidentes | Técnica de verificación: Revisión documental | Estándar de referencia: ISO 27002: 8.16; NIST CSF RC.IM-1",
+      "orden": 112
+    }
+  ]
+}

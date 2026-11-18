@@ -1,0 +1,37 @@
+﻿# Dependencias
+backend/vendor/
+backend/node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Configuración local y secretos
+.env
+*.env
+!*.env.example
+backend/storage/*.key
+
+# Archivos generados por Laravel
+backend/storage/logs/*
+!backend/storage/logs/.gitignore
+backend/storage/framework/views/*.php
+backend/storage/framework/cache/data/*
+backend/storage/framework/sessions/*
+backend/bootstrap/cache/*.php
+
+# Respaldos y empaquetados (nunca al repositorio)
+backups/
+*.sql
+*.zip
+
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+terraform.tfvars
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.refact/

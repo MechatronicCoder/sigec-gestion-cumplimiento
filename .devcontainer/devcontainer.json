@@ -1,0 +1,25 @@
+{
+  "name": "SIGEC v2.0 - Backend (Laravel 12)",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "backend",
+  "workspaceFolder": "/var/www/html",
+  "shutdownAction": "none",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "onecentlin.laravel-blade",
+        "mikestead.dotenv",
+        "eamodio.gitlens",
+        "Continue.continue",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "php.validate.executablePath": "/usr/local/bin/php"
+      }
+    }
+  },
+  "forwardPorts": [8080, 5173, 3306, 8081],
+  "remoteUser": "root"
+}
