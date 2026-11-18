@@ -1,0 +1,5 @@
+# Cada PR que toque estas rutas pide revisión automática a su responsable.
+# Agregar al segundo integrante cuando acepte la invitación al repositorio.
+*                   @MechatronicCoder
+/.github/           @MechatronicCoder
+/infra/             @MechatronicCoder
