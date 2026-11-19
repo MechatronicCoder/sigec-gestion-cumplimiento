@@ -13,8 +13,9 @@ class ChecklistSeeder extends Seeder
     {
         $jsonPath = database_path('seeders/data/checklist_seed_data.json');
 
-        if (!file_exists($jsonPath)) {
+        if (! file_exists($jsonPath)) {
             $this->command->error("No se encontró el archivo: {$jsonPath}");
+
             return;
         }
 
@@ -67,9 +68,9 @@ class ChecklistSeeder extends Seeder
             );
         }
 
-        $this->command->info('Checklist cargado: ' .
-            count($data['dimensiones']) . ' dimensiones, ' .
-            count($data['indicadores']) . ' indicadores, ' .
-            count($data['items']) . ' items.');
+        $this->command->info('Checklist cargado: '.
+            count($data['dimensiones']).' dimensiones, '.
+            count($data['indicadores']).' indicadores, '.
+            count($data['items']).' items.');
     }
 }

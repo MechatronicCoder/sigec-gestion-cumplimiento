@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Dimension;
+use App\Models\Item;
 use Illuminate\Http\Request;
 
 class DimensionController extends Controller
@@ -11,6 +12,7 @@ class DimensionController extends Controller
     public function index()
     {
         $dimensiones = Dimension::orderBy('orden')->withCount('indicadores')->get();
+
         return view('admin.dimensiones.index', compact('dimensiones'));
     }
 
@@ -66,14 +68,14 @@ class DimensionController extends Controller
 
     public function toggleActivo(Dimension $dimension)
     {
-        $nuevoEstado = !$dimension->activo;
+        $nuevoEstado = ! $dimension->activo;
         $dimension->update(['activo' => $nuevoEstado]);
 
-        if (!$nuevoEstado) {
+        if (! $nuevoEstado) {
             // Cascada: si se desactiva la dimensión, se desactivan sus indicadores y los items de esos indicadores
             $indicadorIds = $dimension->indicadores()->pluck('id');
             $dimension->indicadores()->update(['activo' => false]);
-            \App\Models\Item::whereIn('indicador_id', $indicadorIds)->update(['activo' => false]);
+            Item::whereIn('indicador_id', $indicadorIds)->update(['activo' => false]);
         }
 
         return back()->with('success', 'Estado actualizado.');

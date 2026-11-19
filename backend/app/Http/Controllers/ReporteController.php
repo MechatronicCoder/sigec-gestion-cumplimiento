@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ResumenExport;
 use App\Models\Evaluacion;
 use App\Services\ChecklistCalculator;
-use App\Exports\ResumenExport;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ReporteController extends Controller
 {
@@ -13,7 +14,7 @@ class ReporteController extends Controller
     {
         $evaluacion = Evaluacion::latest('fecha_inicio')->first();
 
-        if (!$evaluacion) {
+        if (! $evaluacion) {
             return view('reportes.resumen', [
                 'evaluacion' => null,
                 'resumenDimensiones' => [],
@@ -35,6 +36,7 @@ class ReporteController extends Controller
 
         $historico = $evaluaciones->map(function ($evaluacion) {
             $resumenDimensiones = ChecklistCalculator::resumenDimensiones($evaluacion);
+
             return [
                 'evaluacion' => $evaluacion,
                 'cumplimiento' => ChecklistCalculator::cumplimientoGlobal($resumenDimensiones),
@@ -62,8 +64,9 @@ class ReporteController extends Controller
 
     public function exportExcel(Evaluacion $evaluacion)
     {
-        $nombreArchivo = 'sigec-resumen-' . now()->format('Y-m-d_H-i-s') . '.xlsx';
-        return \Maatwebsite\Excel\Facades\Excel::download(new ResumenExport($evaluacion), $nombreArchivo);
+        $nombreArchivo = 'sigec-resumen-'.now()->format('Y-m-d_H-i-s').'.xlsx';
+
+        return Excel::download(new ResumenExport($evaluacion), $nombreArchivo);
     }
 
     public function exportPdf(Evaluacion $evaluacion)
@@ -74,7 +77,8 @@ class ReporteController extends Controller
 
         $pdf = Pdf::loadView('reportes.resumen-pdf', compact('evaluacion', 'resumenDimensiones', 'resumenIndicadores', 'cumplimientoGlobal'));
 
-        $nombreArchivo = 'sigec-resumen-' . now()->format('Y-m-d_H-i-s') . '.pdf';
+        $nombreArchivo = 'sigec-resumen-'.now()->format('Y-m-d_H-i-s').'.pdf';
+
         return $pdf->download($nombreArchivo);
     }
 }

@@ -11,8 +11,8 @@ return new class extends Migration
         Schema::create('indicadores', function (Blueprint $table) {
             $table->id();
             $table->foreignId('dimension_id')
-                  ->constrained('dimensiones')
-                  ->onDelete('cascade');
+                ->constrained('dimensiones')
+                ->onDelete('cascade');
             $table->string('nombre');
             $table->text('descripcion')->nullable();
             $table->decimal('peso', 5, 2)->default(1.00);

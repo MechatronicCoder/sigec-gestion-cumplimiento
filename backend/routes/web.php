@@ -1,16 +1,17 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AuditoriaController;
 use App\Http\Controllers\Admin\DimensionController;
 use App\Http\Controllers\Admin\IndicadorController;
 use App\Http\Controllers\Admin\ItemController;
-use App\Http\Controllers\ChecklistController;
-use App\Http\Controllers\ReporteController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\UsuarioController;
-use App\Http\Controllers\Admin\AuditoriaController;
-//use App\Models\Evaluacion;
+use App\Http\Controllers\ChecklistController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReporteController;
+use Illuminate\Support\Facades\Route;
+
+// use App\Models\Evaluacion;
 
 Route::get('/', function () {
     return view('welcome');
@@ -71,4 +72,4 @@ Route::middleware(['auth', 'permission:ver-reportes'])->group(function () {
     });
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';

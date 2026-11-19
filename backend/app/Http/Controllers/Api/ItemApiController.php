@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Item;
-use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
+use Illuminate\Http\Request;
 
 class ItemApiController extends Controller
 {
@@ -24,11 +24,11 @@ class ItemApiController extends Controller
     {
         $data = $request->validate([
             'indicador_id' => 'required|exists:indicadores,id',
-            'nombre'       => 'required|string|max:255',
-            'descripcion'  => 'nullable|string',
-            'peso'         => 'required|numeric|min:0|max:100',
-            'orden'        => 'required|integer|min:0',
-            'activo'       => 'boolean',
+            'nombre' => 'required|string|max:255',
+            'descripcion' => 'nullable|string',
+            'peso' => 'required|numeric|min:0|max:100',
+            'orden' => 'required|integer|min:0',
+            'activo' => 'boolean',
         ]);
 
         $item = Item::create($data);
@@ -45,11 +45,11 @@ class ItemApiController extends Controller
     {
         $data = $request->validate([
             'indicador_id' => 'required|exists:indicadores,id',
-            'nombre'       => 'required|string|max:255',
-            'descripcion'  => 'nullable|string',
-            'peso'         => 'required|numeric|min:0|max:100',
-            'orden'        => 'required|integer|min:0',
-            'activo'       => 'boolean',
+            'nombre' => 'required|string|max:255',
+            'descripcion' => 'nullable|string',
+            'peso' => 'required|numeric|min:0|max:100',
+            'orden' => 'required|integer|min:0',
+            'activo' => 'boolean',
         ]);
 
         $item->update($data);

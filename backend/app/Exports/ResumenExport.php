@@ -30,7 +30,9 @@ class ResumenExport implements WithMultipleSheets
 class ResumenDimensionesSheet implements FromArray, WithHeadings, WithTitle
 {
     protected Evaluacion $evaluacion;
+
     protected array $resumenDimensiones;
+
     protected ?float $cumplimientoGlobal;
 
     public function __construct(Evaluacion $evaluacion)
@@ -48,9 +50,9 @@ class ResumenDimensionesSheet implements FromArray, WithHeadings, WithTitle
             $nivel = ChecklistCalculator::nivelInterpretacion($dim['cumplimiento']);
             $filas[] = [
                 $dim['nombre'],
-                $dim['peso'] . '%',
-                $dim['calificados'] . ' / ' . $dim['total_items'],
-                $dim['cumplimiento'] !== null ? $dim['cumplimiento'] . '%' : 'Sin calificar',
+                $dim['peso'].'%',
+                $dim['calificados'].' / '.$dim['total_items'],
+                $dim['cumplimiento'] !== null ? $dim['cumplimiento'].'%' : 'Sin calificar',
                 $nivel['label'],
             ];
         }
@@ -60,7 +62,7 @@ class ResumenDimensionesSheet implements FromArray, WithHeadings, WithTitle
             'CUMPLIMIENTO GLOBAL',
             '',
             '',
-            $this->cumplimientoGlobal !== null ? $this->cumplimientoGlobal . '%' : '—',
+            $this->cumplimientoGlobal !== null ? $this->cumplimientoGlobal.'%' : '—',
             ChecklistCalculator::nivelInterpretacion($this->cumplimientoGlobal)['label'],
         ];
 
@@ -96,8 +98,8 @@ class ResumenIndicadoresSheet implements FromArray, WithHeadings, WithTitle
             $filas[] = [
                 $ind['nombre'],
                 $ind['dimension'],
-                $ind['calificados'] . ' / ' . $ind['total_items'],
-                $ind['cumplimiento'] !== null ? $ind['cumplimiento'] . '%' : 'Sin calificar',
+                $ind['calificados'].' / '.$ind['total_items'],
+                $ind['cumplimiento'] !== null ? $ind['cumplimiento'].'%' : 'Sin calificar',
                 $nivel['label'],
             ];
         }

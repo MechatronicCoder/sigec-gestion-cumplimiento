@@ -24,7 +24,7 @@ class ChecklistController extends Controller
         $evaluaciones = Evaluacion::orderByDesc('fecha_inicio')->get();
 
         // Si nunca se ha creado ninguna evaluacion, no hay nada que mostrar todavia
-        if (!$evaluacion) {
+        if (! $evaluacion) {
             return view('checklist.index', [
                 'evaluacion' => null,
                 'evaluaciones' => $evaluaciones,
@@ -41,9 +41,9 @@ class ChecklistController extends Controller
             ->orderBy('orden')
             ->with(['indicadores' => function ($q) {
                 $q->where('activo', true)->orderBy('orden')
-                  ->with(['items' => function ($q2) {
-                      $q2->where('activo', true)->orderBy('orden');
-                  }]);
+                    ->with(['items' => function ($q2) {
+                        $q2->where('activo', true)->orderBy('orden');
+                    }]);
             }])
             ->get();
 
@@ -91,7 +91,7 @@ class ChecklistController extends Controller
         $evaluacion->touch();
 
         return redirect()->route('checklist.index', ['evaluacion_id' => $evaluacion->id])
-            ->with('success', 'Evaluación guardada. Última modificación: ' . $evaluacion->fresh()->updated_at->locale('es')->isoFormat('DD/MM/YYYY hh:mm A'));
+            ->with('success', 'Evaluación guardada. Última modificación: '.$evaluacion->fresh()->updated_at->locale('es')->isoFormat('DD/MM/YYYY hh:mm A'));
     }
 
     public function editEvaluacion(Evaluacion $evaluacion)
@@ -116,7 +116,7 @@ class ChecklistController extends Controller
         $evaluacion->update(['nombre' => $request->nombre]);
 
         return redirect()->route('checklist.index')->with('success',
-            'Evaluación actualizada. Última modificación: ' . $evaluacion->updated_at->locale('es')->isoFormat('DD/MM/YYYY hh:mm A'));
+            'Evaluación actualizada. Última modificación: '.$evaluacion->updated_at->locale('es')->isoFormat('DD/MM/YYYY hh:mm A'));
     }
 
     /**
@@ -148,7 +148,7 @@ class ChecklistController extends Controller
         }
 
         $nueva = Evaluacion::create([
-            'nombre' => 'Evaluación ' . now()->format('Y-m-d'),
+            'nombre' => 'Evaluación '.now()->format('Y-m-d'),
             'fecha_inicio' => now()->toDateString(),
             'estado' => 'abierta',
             'creado_por' => Auth::id(),

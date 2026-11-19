@@ -11,7 +11,7 @@ class DashboardController extends Controller
     {
         $evaluacion = Evaluacion::latest('fecha_inicio')->first();
 
-        if (!$evaluacion) {
+        if (! $evaluacion) {
             return view('dashboard', [
                 'sinDatos' => true,
             ]);
@@ -24,6 +24,7 @@ class DashboardController extends Controller
         $evaluaciones = Evaluacion::orderBy('fecha_inicio')->get();
         $tendencia = $evaluaciones->map(function ($ev) {
             $resumen = ChecklistCalculator::resumenDimensiones($ev);
+
             return [
                 'fecha' => $ev->fecha_inicio->format('d/m/Y'),
                 'cumplimiento' => ChecklistCalculator::cumplimientoGlobal($resumen),

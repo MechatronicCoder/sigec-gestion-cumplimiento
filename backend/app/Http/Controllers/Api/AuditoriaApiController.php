@@ -38,7 +38,7 @@ class AuditoriaApiController extends Controller
 
     public function exportarExcel(Request $request): BinaryFileResponse
     {
-        $nombreArchivo = 'sigec-auditoria-' . now()->format('Y-m-d_H-i-s') . '.xlsx';
+        $nombreArchivo = 'sigec-auditoria-'.now()->format('Y-m-d_H-i-s').'.xlsx';
 
         return Excel::download(
             new AuditoriaExport($this->filtrosDesdeRequest($request)),
@@ -56,7 +56,7 @@ class AuditoriaApiController extends Controller
         $pdf = Pdf::loadView('auditoria.export-pdf', compact('registros'))
             ->setPaper('a4', 'landscape');
 
-        $nombreArchivo = 'sigec-auditoria-' . now()->format('Y-m-d_H-i-s') . '.pdf';
+        $nombreArchivo = 'sigec-auditoria-'.now()->format('Y-m-d_H-i-s').'.pdf';
 
         return $pdf->download($nombreArchivo);
     }
