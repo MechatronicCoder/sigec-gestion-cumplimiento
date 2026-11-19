@@ -2,15 +2,14 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use App\Models\Dimension;
+use App\Models\Evaluacion;
+use App\Models\EvaluacionItem;
 use App\Models\Indicador;
 use App\Models\Item;
 use App\Models\User;
-use App\Models\Evaluacion;
-use App\Models\EvaluacionItem;
 use App\Observers\AuditoriaObserver;
-
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {

@@ -24,18 +24,18 @@ class UsuarioApiController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name'     => 'required|string|max:255',
-            'email'    => 'required|email|unique:users,email',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8',
-            'rol'      => 'required|string|exists:roles,name',
-            'activo'   => 'boolean',
+            'rol' => 'required|string|exists:roles,name',
+            'activo' => 'boolean',
         ]);
 
         $user = User::create([
-            'name'     => $data['name'],
-            'email'    => $data['email'],
+            'name' => $data['name'],
+            'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'activo'   => $data['activo'] ?? true,
+            'activo' => $data['activo'] ?? true,
         ]);
 
         $user->syncRoles([$data['rol']]);
@@ -46,15 +46,15 @@ class UsuarioApiController extends Controller
     public function update(Request $request, User $usuario)
     {
         $data = $request->validate([
-            'name'   => 'required|string|max:255',
-            'email'  => ['required', 'email', Rule::unique('users', 'email')->ignore($usuario->id)],
-            'rol'    => 'required|string|exists:roles,name',
+            'name' => 'required|string|max:255',
+            'email' => ['required', 'email', Rule::unique('users', 'email')->ignore($usuario->id)],
+            'rol' => 'required|string|exists:roles,name',
             'activo' => 'boolean',
         ]);
 
         $usuario->update([
-            'name'   => $data['name'],
-            'email'  => $data['email'],
+            'name' => $data['name'],
+            'email' => $data['email'],
             'activo' => $data['activo'] ?? $usuario->activo,
         ]);
 
@@ -72,7 +72,7 @@ class UsuarioApiController extends Controller
 
     public function resetPassword(User $usuario)
     {
-        $temporal = 'Sigec' . random_int(1000, 9999) . '!';
+        $temporal = 'Sigec'.random_int(1000, 9999).'!';
         $usuario->update(['password' => Hash::make($temporal)]);
 
         return response()->json(['password_temporal' => $temporal]);

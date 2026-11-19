@@ -127,6 +127,7 @@ class ChecklistCalculator
         if ($porcentaje >= 50) {
             return ['label' => 'Moderado', 'color' => 'amber'];
         }
+
         return ['label' => 'Crítico', 'color' => 'red'];
     }
 }

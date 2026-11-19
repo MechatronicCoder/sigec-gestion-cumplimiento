@@ -11,8 +11,8 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->foreignId('indicador_id')
-                  ->constrained('indicadores')
-                  ->onDelete('cascade');
+                ->constrained('indicadores')
+                ->onDelete('cascade');
             $table->string('nombre');
             $table->text('descripcion')->nullable();
             $table->decimal('peso', 5, 2)->default(1.00);

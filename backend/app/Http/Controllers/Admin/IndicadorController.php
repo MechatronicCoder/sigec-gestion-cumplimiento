@@ -12,6 +12,7 @@ class IndicadorController extends Controller
     public function index()
     {
         $indicadores = Indicador::with('dimension')->orderBy('orden')->withCount('items')->get();
+
         return view('admin.indicadores.index', compact('indicadores'));
     }
 
@@ -19,6 +20,7 @@ class IndicadorController extends Controller
     {
         $dimensiones = Dimension::orderBy('orden')->get();
         $dimensionSeleccionada = request()->query('dimension_id');
+
         return view('admin.indicadores.create', compact('dimensiones', 'dimensionSeleccionada'));
     }
 
@@ -42,6 +44,7 @@ class IndicadorController extends Controller
     public function edit(Indicador $indicador)
     {
         $dimensiones = Dimension::orderBy('orden')->get();
+
         return view('admin.indicadores.edit', compact('indicador', 'dimensiones'));
     }
 
@@ -71,10 +74,10 @@ class IndicadorController extends Controller
 
     public function toggleActivo(Indicador $indicador)
     {
-        $nuevoEstado = !$indicador->activo;
+        $nuevoEstado = ! $indicador->activo;
         $indicador->update(['activo' => $nuevoEstado]);
 
-        if (!$nuevoEstado) {
+        if (! $nuevoEstado) {
             // Cascada: si se desactiva el indicador, se desactivan sus items
             $indicador->items()->update(['activo' => false]);
         }

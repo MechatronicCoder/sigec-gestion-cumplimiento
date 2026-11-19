@@ -33,7 +33,7 @@ class ChecklistApiController extends Controller
         }
 
         $nueva = Evaluacion::create([
-            'nombre' => 'Evaluación ' . now()->format('Y-m-d'),
+            'nombre' => 'Evaluación '.now()->format('Y-m-d'),
             'fecha_inicio' => now()->toDateString(),
             'estado' => 'abierta',
             'creado_por' => Auth::id(),
@@ -52,9 +52,9 @@ class ChecklistApiController extends Controller
             ->orderBy('orden')
             ->with(['indicadores' => function ($q) {
                 $q->where('activo', true)->orderBy('orden')
-                  ->with(['items' => function ($q2) {
-                      $q2->where('activo', true)->orderBy('orden');
-                  }]);
+                    ->with(['items' => function ($q2) {
+                        $q2->where('activo', true)->orderBy('orden');
+                    }]);
             }])
             ->get();
 

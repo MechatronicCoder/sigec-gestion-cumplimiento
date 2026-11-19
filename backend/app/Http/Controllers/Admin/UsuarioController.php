@@ -13,6 +13,7 @@ class UsuarioController extends Controller
     public function index()
     {
         $usuarios = User::orderBy('name')->get();
+
         return view('admin.usuarios.index', compact('usuarios'));
     }
 
@@ -51,7 +52,7 @@ class UsuarioController extends Controller
     {
         $data = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email,' . $usuario->id,
+            'email' => 'required|email|unique:users,email,'.$usuario->id,
             'rol' => 'required|in:admin,evaluador,consulta',
         ]);
 
@@ -69,7 +70,7 @@ class UsuarioController extends Controller
             return back()->with('error', 'No puedes deshabilitar tu propia cuenta.');
         }
 
-        $usuario->update(['activo' => !$usuario->activo]);
+        $usuario->update(['activo' => ! $usuario->activo]);
 
         return back()->with('success', 'Estado del usuario actualizado.');
     }

@@ -15,8 +15,8 @@ return new class extends Migration
             $table->date('fecha_fin')->nullable();
             $table->enum('estado', ['abierta', 'cerrada'])->default('abierta');
             $table->foreignId('creado_por')
-                  ->constrained('users')
-                  ->onDelete('restrict');
+                ->constrained('users')
+                ->onDelete('restrict');
             $table->timestamps();
         });
     }

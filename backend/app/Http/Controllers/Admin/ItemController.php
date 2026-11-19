@@ -12,6 +12,7 @@ class ItemController extends Controller
     public function index()
     {
         $items = Item::with('indicador.dimension')->orderBy('orden')->get();
+
         return view('admin.items.index', compact('items'));
     }
 
@@ -19,6 +20,7 @@ class ItemController extends Controller
     {
         $indicadores = Indicador::with('dimension')->orderBy('dimension_id')->orderBy('orden')->get();
         $indicadorSeleccionado = request()->query('indicador_id');
+
         return view('admin.items.create', compact('indicadores', 'indicadorSeleccionado'));
     }
 
@@ -42,6 +44,7 @@ class ItemController extends Controller
     public function edit(Item $item)
     {
         $indicadores = Indicador::with('dimension')->orderBy('dimension_id')->orderBy('orden')->get();
+
         return view('admin.items.edit', compact('item', 'indicadores'));
     }
 
@@ -71,7 +74,8 @@ class ItemController extends Controller
 
     public function toggleActivo(Item $item)
     {
-        $item->update(['activo' => !$item->activo]);
+        $item->update(['activo' => ! $item->activo]);
+
         return back()->with('success', 'Estado actualizado.');
     }
 }

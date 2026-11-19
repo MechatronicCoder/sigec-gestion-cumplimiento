@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Dimension;
-use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
+use Illuminate\Http\Request;
 
 class DimensionApiController extends Controller
 {
@@ -17,11 +17,11 @@ class DimensionApiController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'nombre'      => 'required|string|max:255',
+            'nombre' => 'required|string|max:255',
             'descripcion' => 'nullable|string',
-            'peso'        => 'required|numeric|min:0|max:100',
-            'orden'       => 'required|integer|min:0',
-            'activo'      => 'boolean',
+            'peso' => 'required|numeric|min:0|max:100',
+            'orden' => 'required|integer|min:0',
+            'activo' => 'boolean',
         ]);
 
         $dimension = Dimension::create($data);
@@ -37,11 +37,11 @@ class DimensionApiController extends Controller
     public function update(Request $request, Dimension $dimension)
     {
         $data = $request->validate([
-            'nombre'      => 'required|string|max:255',
+            'nombre' => 'required|string|max:255',
             'descripcion' => 'nullable|string',
-            'peso'        => 'required|numeric|min:0|max:100',
-            'orden'       => 'required|integer|min:0',
-            'activo'      => 'boolean',
+            'peso' => 'required|numeric|min:0|max:100',
+            'orden' => 'required|integer|min:0',
+            'activo' => 'boolean',
         ]);
 
         $dimension->update($data);

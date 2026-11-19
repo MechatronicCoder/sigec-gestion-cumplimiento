@@ -1,5 +1,7 @@
 # SIGEC · Sistema de Gestión de Cumplimiento
 
+[![CI](https://github.com/MechatronicCoder/sigec-gestion-cumplimiento/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/MechatronicCoder/sigec-gestion-cumplimiento/actions/workflows/ci.yml)
+
 Proyecto Integrador del Diploma **DevOps Engineer** (DMC Institute).
 
 SIGEC evalúa el nivel de cumplimiento de **ciberseguridad** de una organización con un checklist de 5 dimensiones, 20 indicadores y 112 ítems de control. Calcula el porcentaje de cumplimiento por dimensión, guarda el histórico de evaluaciones, exporta reportes en PDF y Excel, y registra una auditoría de cambios. Tiene tres roles: administrador, evaluador y consulta.
